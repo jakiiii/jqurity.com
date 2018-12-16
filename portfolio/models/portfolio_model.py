@@ -17,7 +17,7 @@ def upload_image_path(inistance, file_name):
 
 
 # Create your models here.
-class PortfolioModel(models.Model):
+class Portfolio(models.Model):
     project_name = models.CharField(max_length=40)
     image = models.ImageField(upload_to=upload_image_path)
     git_link = models.URLField(max_length=300, null=True, blank=True)

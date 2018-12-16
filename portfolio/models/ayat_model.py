@@ -2,9 +2,11 @@ from django.db import models
 
 
 # Create your models here.
-class AyatModel(models.Model):
+class Ayat(models.Model):
     ayat = models.TextField()
+    verse = models.CharField(max_length=120)
+    verse_link = models.URLField(max_length=300)
     timestamp = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
-        return "Ayat of Al-Quran"
+        return self.verse

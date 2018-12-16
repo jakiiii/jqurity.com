@@ -24,7 +24,7 @@ def upload_file_path(inistance, file_name):
 
 
 # Create your models here.
-class SliderModel(models.Model):
+class Slider(models.Model):
     highlight_quote = models.CharField(max_length=120, null=True, blank=True)
     slider = models.ImageField(upload_to=upload_image_path, null=True, blank=True)
     resume = models.FileField(upload_to=upload_file_path, null=True, blank=True)

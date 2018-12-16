@@ -2,7 +2,7 @@ from django.db import models
 
 
 # Create your models here.
-class FamiliarModel(models.Model):
+class Familiar(models.Model):
     familiar = models.CharField(max_length=25)
     timestamp = models.DateTimeField(auto_now_add=True)
 

@@ -1,19 +1,19 @@
 from django.contrib import admin
 
 from .models import (
-    SliderModel,
-    AyatModel,
-    ExperienceModel,
-    FamiliarModel,
-    InterestModel,
-    PortfolioModel,
+    Slider,
+    Ayat,
+    Experience,
+    Familiar,
+    Interest,
+    Portfolio,
 )
 
 
 # Register your models here.
-admin.site.register(SliderModel)
-admin.site.register(AyatModel)
-admin.site.register(ExperienceModel)
-admin.site.register(FamiliarModel)
-admin.site.register(InterestModel)
-admin.site.register(PortfolioModel)
+admin.site.register(Slider)
+admin.site.register(Ayat)
+admin.site.register(Experience)
+admin.site.register(Familiar)
+admin.site.register(Interest)
+admin.site.register(Portfolio)

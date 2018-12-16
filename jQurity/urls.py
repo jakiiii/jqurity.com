@@ -32,6 +32,7 @@ urlpatterns = [
     path('', include('search.urls')),
     path('', include('category.urls')),
     path('portfolio/', include('portfolio.urls')),
+    path('', include('contact.urls')),
     path('ckeditor/', include('ckeditor_uploader.urls')),
     path('ckeditor/', include('ckeditor_uploader.urls')),
 ]
