@@ -55,6 +55,7 @@ LOCAL_APPS = [
     'post',
     'about',
     'search',
+    'portfolio',
 ]
 
 INSTALLED_APPS += THIRD_PARTY_APPS + LOCAL_APPS
