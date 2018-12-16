@@ -1,0 +1,44 @@
+{% url 'home' as home_url %}
+{% url 'profile' as profile_url %}
+{% url 'login' as account_url %}
+{% url 'logout' as logout_url %}
+
+<section>
+    <div class="header">
+        <div class="row">
+            <div class="col-xs-12 col-sm-12">
+                <nav class="navbar navbar-expand-lg navbar-light justify-content-between">
+                    <div class="container">
+                        <div class="col-xs-8 col-sm-8">
+                            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                                <ul class="navbar-nav mr-auto float-left">
+                                    <li class="nav-item {% if request.path == home_url %}active{% endif %}">
+                                        <a class="nav-link" href="{{ home_url }}">Home</a>
+                                    </li>
+                                    {% if not request.user.is_authenticated %}
+                                        <li class="nav-item {% if request.path == account_url %}active{% endif %}">
+                                            <a class="nav-link" href="{{ account_url }}">Account</a>
+                                        </li>
+                                    {% else %}
+                                        <li class="nav-item {% if request.path == profile_url %}active{% endif %}">
+                                            <a class="nav-link" href="{{ profile_url }}">Profile</a>
+                                        </li>
+                                    {% endif %}
+                                    <!--
+                                    <li class=" nav-item">
+                                        <a class="nav-link" href="index.html">Portfolio</a>
+                                    </li>
+                                    -->
+                                </ul>
+                            </div><!-- end of collapse navbar-collapse -->
+                        </div><!-- col-xs-6 col-sm-6 for navbar -->
+                        <div class="col-xs-4 col-sm-4">
+                            {% include 'base/search.html' %}
+                        </div><!-- col-xs-6 col-sm-6 for search -->
+                    </div><!-- end of container-->
+                </nav><!-- end of nav navbar -->
+            </div><!-- col-xs-12 col-sm-12 -->
+        </div><!-- end of row -->
+    </div><!-- end of header -->
+</section>
+<div class="clearfix"></div>

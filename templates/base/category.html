@@ -1,0 +1,34 @@
+{% if category_list %}
+<div class="category">
+    <div id="accordion">
+        <div class="card">
+            <div class="card-header">
+                Category
+            </div>
+            <div class="card-body">
+                <div>
+                    {% for category in category_list %}
+                        <div id="headingTwo">
+                            <h5 class="mb-0">
+                                <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#{{ category.category }}" aria-expanded="false" aria-controls="collapseTwo">
+                                    {{ category.category }}
+                                </button>
+                            </h5>
+                        </div>
+                        <div id="{{ category.category }}" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+                            <div class="sub-category">
+                                {% for sub_cat in sub_category %}
+                                    {% if sub_cat.category == category %}
+                                <a href="{{ sub_cat.get_absolute_url }}" class="">{{ sub_cat.sub_category }}</a><br/>
+                                    {% endif %}
+                                {% endfor %}
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+</div><!-- category section -->
+<div class="clearfix"></div><br />
+{% endif %}

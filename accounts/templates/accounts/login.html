@@ -1,0 +1,24 @@
+{% extends 'account_base.html' %}
+{% block title %}Login || {{ block.super }}{% endblock title %}
+
+{% block content %}
+<div>
+    <div class="" align="" style="margin-left: 14rem;">
+        <div class="card" style="width: 40rem; margin-top: 2rem;">
+            <div class="card-header text-left"><b>User Login</b></div>
+            <div class="card-body">
+                {% include 'form.html' %}
+            </div><!-- end of card body -->
+        </div><!-- end of card -->
+        <div class="col-6" style="margin-top: 2rem; margin-left: 6rem;">
+            {% if messages %}
+            <div class="messages">
+                {% for message in messages %}
+                <p {% if message.tags %} class="text-center {{ message.tags }}"{% endif %}>{{ message }}</p>
+                {% endfor %}
+            </div>
+            {% endif %}
+        </div>
+    </div>
+</div>
+{% endblock %}

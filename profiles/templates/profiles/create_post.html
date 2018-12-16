@@ -1,0 +1,15 @@
+{% extends 'account_base.html' %}
+{% block title %}{{ title }} || {{ block.super }}{% endblock title %}
+
+{% block content %}
+<div class="container">
+    <div class="">
+        <div class="card" style="margin-top: 2rem;">
+            <div class="card-header text-left"><b>{{ title }}</b></div>
+            <div class="card-body">
+                {% include 'form.html' %}
+            </div><!-- end of card body -->
+        </div><!-- end of card -->
+    </div>
+</div>
+{% endblock %}

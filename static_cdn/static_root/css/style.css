@@ -1,0 +1,855 @@
+*{
+    box-sizing: border-box;
+}
+body.portfolio{
+    width: 100%;
+    color: #fff;
+    font-family: "Arial", Helvetica, sans-serif;
+    background-color: #161616;
+    background-image: repeating-linear-gradient(135deg, #333, #333 25%, transparent 25%, transparent 50%), repeating-linear-gradient(-135deg, #333, #333 25%, transparent 25%, transparent 50%);
+    background-size: 12px 12px;
+}
+
+/********************************************
+***********************HEADER
+********************************************/
+header.portfolio-header{
+    width: 100%;
+    height: 100vh;
+    background: url(../image/slider.jpg) no-repeat center center / cover;
+    position: relative;
+}
+/**********LOGO**********/
+header div.grid{
+    width: 100%;
+    height: 70px;
+    background-color: rgba(0,0,0,0.5);
+}
+header a.logo{
+    z-index: 1;
+    text-decoration: none;
+    position: relative;
+    display: block;
+    width: 170px;
+    top: 5px;
+    left: 20px;
+    float: left;
+    color: #fff;
+    font-family: "Satisfy",cursive;
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-shadow: 3px 3px 2px #ccc;
+}
+header .grid a{
+    position: relative;
+}
+header .grid a span{
+    display: inline-block;
+	font-weight: 900;
+	line-height: 1;
+	position: relative;
+	//color: hsla(0, 0%, 0%, 0.6);
+	-webkit-transform-style: preserve-3d;
+	-ms-transform-style: preserve-3d;
+	transform-style: preserve-3d;
+	-webkit-perspective: 550px;
+	-ms-perspective: 550px;
+	perspective: 550px;
+	z-index: 1;
+}
+header .grid a span:before,
+header .grid a span:after {
+	position: absolute;
+	content: attr(data-letter);
+	line-height: inherit;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 2;
+	-webkit-transition: all .3s;
+	transition: all .3s;
+}
+.grid a span:before {
+	text-shadow: none;
+	color: hsla(0, 0%, 0%, 0.12);
+}
+
+/* Logo Colors */
+.ot-letter-bottom span { text-shadow: 1px 1px 3px #fff, 0 0 0 hsla(0, 0%, 0%, 0.3), 1px 3px 3px #999; }
+.ot-letter-bottom span:after { color: #fff; }
+.ot-letter-bottom:hover span:after{ color: #fff; }
+
+/* Logo Colors Hover */
+.ot-letter-bottom span:before,
+.ot-letter-bottom span:after {
+	-webkit-transform-origin: 50% 0;
+	-ms-transform-origin: 50% 0;
+	transform-origin: 50% 0;
+}
+.ot-letter-bottom span:before {
+	-webkit-transform: scale(1,1.05) skew(4deg,0deg);
+	-ms-transform: scale(1,1.05) skew(4deg,0deg);
+	transform: scale(1,1.05) skew(4deg,0deg);
+}
+.ot-letter-bottom span:after {
+	text-shadow: 0px -1px 0px hsla(360, 100%, 100%, 0.1), 0px 3px 1px hsla(0, 0%, 0%, 0.4);
+	-webkit-transform: rotateX(15deg);
+	-ms-transform: rotateX(15deg);
+	transform: rotateX(15deg);
+}
+.ot-letter-bottom:hover span:before {
+	-webkit-transform: translateY(-0.035em) scale(1,1.2) skew(10deg,0deg);
+	-ms-transform: translateY(-0.035em) scale(1,1.2) skew(10deg,0deg);
+	transform: translateY(-0.035em) scale(1,1.2) skew(10deg,0deg);
+}
+.ot-letter-bottom:hover span:after {
+	-webkit-transform: translateY(0.045em) rotateX(40deg);
+	-ms-transform: translateY(0.045em) rotateX(40deg);
+	transform: translateY(0.045em) rotateX(40deg);
+}
+
+/**********NAVIGATION**********/
+nav.portfolio{
+    font-weight: bold;
+    position: absolute;
+    padding: 25px 0 0 0;
+    width: 100%;
+    overflow:hidden;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -o-box-sizing: border-box;
+}
+nav > ul{
+    float: right;
+}
+nav > ul > li{
+    float: left;
+}
+nav ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    height: 45px;
+    overflow: hidden;
+}
+nav ul li .item-container{
+    top: 0;
+    position: relative;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+}
+nav ul li .item-container:hover{
+    top:-45px;
+}
+nav ul li .item-top,
+nav ul li .item-bottom{
+    height: 45px;
+    position: relative;
+}
+nav ul li .item-top{
+    //color:#797979;
+}
+nav ul li .item-bottom{
+    background-color: rgba(0,0,0,0.5);
+    color:#ffffff;
+}
+nav ul li a{
+    display: inline-block;
+    color: #fff;
+    padding: 10px 20px 10px 10px;
+    margin-right: 5px;
+    text-decoration: none;
+    position: relative;
+    transition: transform 0.3s ease 0s;
+}
+nav ul li a:visited{
+    color: #fff;
+}
+/**********SLIDER TEXT**********/
+header div.slider_text{
+    position: absolute;
+    text-align: center;
+    width: 70%;
+    top: 45%;
+    left: 15%
+}
+header div.slider_text p{
+    line-height: 1em;
+    font-size: 3rem;
+    text-transform: capitalize;
+    margin: 0 0 30px 0;
+    color: #fff;
+    font-weight: bold;
+    text-shadow: 5px 5px 5px #333;
+}
+header div.slider_text a.btn{
+    display: inline;
+    text-decoration: none;
+    font-family: "Arial Black", Gadget, sans-serif;
+    color: #fff;
+    padding: 10px 20px;
+    border: 10px;
+    margin: 5px;
+    background-color: rgba(0,0,0,0.1);
+    cursor: pointer;
+    border: solid 1px #fff;
+    border-radius: 5px;
+    transition: 0.5s;
+}
+header div.slider_text a.btn:hover{
+    border-color: #444;
+    color: #333;
+    background-color: rgba(255,255,255,0.5);
+    text-shadow: none;
+    border: solid 1px #fff;
+}
+header div.slider_text a.btn:active{
+    position: relative;
+    top: 1px;
+}
+/********************************************
+***********************QUOTE SECTION
+********************************************/
+section div.quote_content{
+    width: 100%;
+    height: 150px;
+    background-color: rgba(0,0,0,0.75);
+    overflow: hidden;
+}
+section div.quote_content p{
+    width: 80%;
+    margin: 2.1rem auto;
+    font-size: 1.2rem;
+    font-family: "Satisfy",cursive;
+    text-align: justify;
+}
+section div.quote_content a{
+    float: right;
+    margin: -1rem 7rem 0 0;
+    text-decoration: none;
+    color: #333;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: 0.5s;
+}
+section div.quote_content a:hover{
+    color: #fff;
+}
+/********************************************
+***********************ABOUT SECTION
+********************************************/
+section div.about{
+    width: 100%;
+    height: 450px;
+    background-color: #222;
+    overflow: hidden;
+}
+section div.about div.about_image{
+    width: 35%;
+    height: 450px;
+    float: left;
+}
+section div.about div.about_image div.img{
+    margin: 6rem 0 0 5rem;
+    width: 250px;
+    height: 250px;
+    background: url(../image/pro_img.jpg) no-repeat center center;
+    border-radius: 100%;
+    box-shadow:
+        inset 0 0 10px #000,
+        inset 0 0 10px #000,
+        inset 0 0 10px #000;
+    -webkit-box-shadow:
+        inset 0 0 10px #000,
+        inset 0 0 10px #000,
+        inset 0 0 10px #000;
+    -moz-box-shadow:
+        inset 0 0 10px #000,
+        inset 0 0 10px #000,
+        inset 0 0 10px #000;
+    -o-box-shadow:
+        inset 0 0 10px #000,
+        inset 0 0 10px #000,
+        inset 0 0 10px #000;
+    transition: 0.5s;
+    -webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
+    -o-transition: 0.5s;
+    cursor: pointer;
+}
+section div.about div.about_image div.img:hover{
+    opacity: 0.8;
+}
+section div.about div.about_story{
+    width: 65%;
+    height: 450px;
+    float: left;
+}
+section div.about div.about_story h3{
+    margin: 3rem 0 0 1rem;
+    font-family: 'Satisfy', cursive;
+    font-size: 1.5rem;
+    border-bottom: 1px solid #fff;
+}
+section div.about div.about_story p{
+    width: 90%;
+    margin: 1rem auto;
+    text-align: justify;
+}
+/********************************************
+***********************SKILL
+********************************************/
+section div.skill{
+    width: 100%;
+    color: #fff;
+    overflow: hidden;
+}
+/* H2 SECTION | TITLE */
+section div.skill h2{
+    width: 300px;
+    text-align: center;
+    margin: 1rem auto 0;
+    font-size: 2rem;
+    border: 1px solid #333;
+    padding: 0.4em 0em;
+    box-shadow: 4px 4px 3px rgba(255,255,255,.2);
+    cursor: pointer;
+    opacity: 0.8;
+    transition: 0.5s;
+    text-transform: uppercase;
+}
+section div.skill h2:hover{
+    opacity: 0.9;
+    box-shadow: 4px 4px 3px rgba(0,0,0,0.9);
+}
+section div.skill h2.light{
+    background: -moz-linear-gradient(-45deg,  #333 0%, #333 40%, #ffffff 50%, #333 60%, #333 100%);
+    background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,#333), color-stop(40%,#333), color-stop(50%,#ffffff), color-stop(60%,#333), color-stop(100%,#333));
+    background: -webkit-linear-gradient(-45deg,  #333 0%,#333 40%,#ffffff 50%,#333 60%,#333 100%);
+    background: -o-linear-gradient(-45deg,  #333 0%,#333 40%,#ffffff 50%,#333 60%,#333 100%);
+    background: -ms-linear-gradient(-45deg,  #333 0%,#333 40%,#ffffff 50%,#333 60%,#333 100%);
+    background: linear-gradient(135deg,  #333 0%,#333 40%,#ffffff 50%,#333 60%,#333 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#333', endColorstr='#333',GradientType=1 );
+    background-repeat: no-repeat;  
+    background-position:0px;
+    background-size:300%;
+}
+section div.skill h2.light:hover{
+    animation:light 1s;
+    -webkit-animation:light 1s;
+}
+@keyframes light {
+    0% {
+        background-position:-600px; 
+    }
+    100% { 
+        background-position:0px; 
+    }
+}
+
+@-webkit-keyframes light {
+    0% {
+        background-position:-600px;
+    }
+    100% { 
+        background-position:0px;
+    }
+}
+/* H3 SECTION | SUBTITLE */
+section div.skill{
+    background-color: #111;
+}
+section div.skill h3{
+    width: 10rem;
+    margin-left: 3rem;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+}
+section div.skill h3.underline{
+    border-bottom: 2px transparent solid;
+    display: block;
+    position: relative;
+    -webkit-transition: color 250ms linear;
+    transition: color 250ms linear;
+}
+section div.skill h3.underline::before{
+    background-color: #fff;
+    content: '';
+    height: 2px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    -webkit-transition: width 300ms ease-in;
+    transition: width 300ms ease-in;
+    width: 0;
+}
+section div.skill h3.underline::after{
+    color: #FFFFFF;
+    content: '|';
+    position: absolute;
+    right: -1%;
+    display: none;
+}
+section div.skill h3.underline:hover::before{
+    -webkit-transition: width 300ms ease-out;
+    transition: width 300ms ease-out;
+    width: 100%;
+}
+section div.skill h3.underline:hover::after{
+    display: inline;
+}
+/* SKILL | SUBJECT */
+section div.skill div.top_skill ul,
+section div.skill div.also_know ul,
+section div.skill div.other_skill ul{
+    //text-decoration: none;
+    margin-left: 2rem;
+}
+section div.skill div.top_skill ul li{
+    width: 200px;
+    height: 10px;
+    text-align: center;
+    font-size: 1.3rem;
+    list-style-type: none;
+    display: inline-block;
+    padding-right: 5px;
+    font-weight: bold;
+    //border: 5px solid #fff;
+    //border-radius: 25% 0;
+    padding: 20px 0 40px;
+    margin: 10px;
+    background-color: rgba(0,0,0,0.8);
+    cursor: pointer;
+    box-shadow: 5px 5px 5px #333;
+    text-shadow: .5px .5px 1px #ccc;
+    box-sizing: border-box;
+    transform: scale(1);
+    transition: 0.6s;
+}
+section div.skill div.also_know ul li,
+section div.skill div.other_skill ul li{
+    width: 200px;
+    height: 10px;
+    text-align: center;
+    font-size: 1.3rem;
+    list-style-type: none;
+    display: inline-block;
+    padding-right: 5px;
+    font-weight: bold;
+    //border: 5px solid #fff;
+    //border-radius: 25% 0;
+    padding: 20px 0 40px;
+    margin: 10px;
+    background-color: rgba(0,0,0,0.8);
+    cursor: pointer;
+    box-shadow: 4px 4px 4px #222;
+    text-shadow: .5px .5px 1px #ccc;
+    box-sizing: border-box;
+    transform: scale(1);
+    transition: 1s;
+}
+section div.skill div.top_skill ul li:hover,
+section div.skill div.also_know ul li:hover,
+section div.skill div.other_skill ul li:hover{
+    transform: scale(1.01);
+    background-color: rgba(255,255,255,.8);
+    color: #111;
+    box-shadow: 4px 5px 4px rgba(255,255,255,.4);
+    text-shadow: .5px .5px 1px #111;
+}
+/********************************************
+***********************PORTFOLIO SECTION
+********************************************/
+section.portfolio_bg{
+    background-color: rgba(0,0,0,0.75);
+    margin: 0px; padding: 0px;
+    box-sizing: border-box;
+    font-family: "Times New Roman", Times, serif;
+}
+section div.portfolio_content{
+    width: 100%;
+    height: 550px;
+    overflow: hidden;
+}
+section div.portfolio_content p{
+    text-align: center;
+    font-size: 3rem;
+    margin-top: 10px;
+    font-family: "Arial Black", Gadget, sans-serif;
+    text-shadow: 2px 2px 4px #fff;
+    cursor: pointer;
+}
+section div.portfolio_content div{
+    width: 100%;
+    text-align: center;
+    margin-top: -30px;
+}
+section div.portfolio_content div.grids {
+    position: relative;
+    list-style: none;
+}
+/* Common style */
+section div.portfolio_content div.grids figure{
+    margin: 0;
+    padding: 0;
+    position: relative;
+    float: left;
+    overflow: hidden;
+    min-width: 25%;
+    max-width: 25%;
+    max-height: 180px;
+    cursor: pointer;
+}
+section div.portfolio_content div.grids figure img{
+    position: relative;
+    display: block;
+    min-height: 100%;
+    max-width: 100%;
+}
+section div.portfolio_content div.grids figure figcaption{
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 1.25rem;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+section div.portfolio_content div.grids figure figcaption::before,
+section div.portfolio_content div.grids figure figcaption::after {
+    pointer-events: none;
+}
+section div.portfolio_content div.grids figure figcaption{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+section div.portfolio_content div.grids figure h4{
+    word-spacing: -0.1rem;
+    font-weight: bold;
+    text-shadow: 2px 2px 3px #666;
+}
+section div.portfolio_content div.grids figure h4,
+section div.portfolio_content div.grids figure a{
+    margin: 0;
+}
+section div.portfolio_content div.grids figure p a{
+    font-size: 1.5rem;
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    padding-left: 3rem;
+    text-shadow: 1px 1px 2px #666;
+}
+section div.portfolio_content div.grids figure p small{
+    font-size: 1rem;
+    font-family: "Times New Roman", Times, serif;
+}
+/*---------------*/
+/***** Layla *****/
+/*---------------*/
+section div.portfolio_content div.grids figure.effect-layla img{
+    width: 100%;
+    height: 205px;
+    box-sizing: border-box;
+}
+section div.portfolio_content div.grids figure.effect-layla figcaption{
+    padding: 1rem;
+}
+section div.portfolio_content div.grids figure.effect-layla figcaption::before,
+section div.portfolio_content div.grids figure.effect-layla figcaption::after {
+    position: absolute;
+    content: '';
+    opacity: 0;
+}
+section div.portfolio_content div.grids figure.effect-layla figcaption::before {
+    top: 20px;
+    right: 20px;
+    bottom: 30px;
+    left: 10px;
+    border-top: 1px solid #fff;
+    border-bottom: 1px solid #fff;
+    -webkit-transform: scale(0,1);
+    transform: scale(0,1);
+    -webkit-transform-origin: 0 0;
+    transform-origin: 0 0;
+}
+section div.portfolio_content div.grids figure.effect-layla figcaption::after{
+    top: 10px;
+    right: 30px;
+    bottom: 20px;
+    left: 20px;
+    border-right: 1px solid #fff;
+    border-left: 1px solid #fff;
+    -webkit-transform: scale(1,0);
+    transform: scale(1,0);
+    -webkit-transform-origin: 100% 0;
+    transform-origin: 100% 0;
+}
+section div.portfolio_content div.grids figure.effect-layla h4{
+    //padding-top: 26%;
+    padding: 5.5% 3%;
+    -webkit-transition: -webkit-transform 0.35s;
+    transition: transform 0.35s;
+}
+section div.portfolio_content div.grids figure.effect-layla p a .fa-link{
+    font-size: 2rem;
+}
+section div.portfolio_content div.grids figure.effect-layla p{
+    text-transform: none;
+    opacity: 0;
+    -webkit-transform: translate3d(0,-10px,0);
+    transform: translate3d(0,-10px,0);
+}
+section div.portfolio_content div.grids figure.effect-layla img{
+    -webkit-transform: translate3d(0,-25px,0);
+    transform: translate3d(0,-25px,0);
+}
+figure.effect-layla h4{
+    -webkit-transform: translate3d(0,-15px,0);
+    transform: translate3d(0,-15px,0);
+}
+
+section div.portfolio_content div.grids figure.effect-layla img,
+section div.portfolio_content div.grids figure.effect-layla figcaption::before,
+section div.portfolio_content div.grids figure.effect-layla figcaption::after,
+section div.portfolio_content div.grids figure.effect-layla p {
+    -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+    transition: opacity 0.35s, transform 0.35s;
+}
+
+section div.portfolio_content div.grids figure.effect-layla:hover img {
+    opacity: 0.7;
+    -webkit-transform: translate3d(0,0,0);
+    transform: translate3d(0,0,0);
+}
+section div.portfolio_content div.grids figure.effect-layla:hover figcaption::before,
+section div.portfolio_content div.grids figure.effect-layla:hover figcaption::after {
+    opacity: 1;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+}
+
+section div.portfolio_content div.grids figure.effect-layla:hover h4,
+section div.portfolio_content div.grids figure.effect-layla:hover p {
+    opacity: 1;
+    -webkit-transform: translate3d(0,0,0);
+    transform: translate3d(0,0,0);
+}
+
+section div.portfolio_content div.grids figure.effect-layla:hover figcaption::after,
+section div.portfolio_content div.grids figure.effect-layla:hover h4,
+section div.portfolio_content div.grids figure.effect-layla:hover p,
+section div.portfolio_content div.grids figure.effect-layla:hover img {
+    -webkit-transition-delay: 0.15s;
+    transition-delay: 0.15s;
+}
+section div.portfolio_content h4{
+    text-align: center;
+}
+section div.portfolio_content p a.all{
+    font-size: 1rem;
+    text-decoration: none;
+    color: #333;
+    text-shadow: none;
+    transition: 0.5s;
+}
+section div.portfolio_content p a.all:hover{
+    color: #fff;
+}
+/********************************************
+***********************CONTACT SECTION
+********************************************/
+/**********INFO**********/
+section div.info{
+    width: 100%;
+    height: 400px;
+    background: rgba(0,0,0,0.75) url(../image/image_03.jpg) no-repeat center center / cover;
+    overflow: hidden;
+}
+section div.info p{
+    width: 100%;
+    text-align: center;
+    font-size: 3rem;
+    font-weight: bold;
+    text-shadow: 3px 3px 4px #333;
+    margin-top: 15px;
+}
+section div.info form{
+    color: #000;
+    margin-top: -30px;
+    padding: 0 5rem;
+    opacity: 0.9;
+    font-family: Lucida Handwriting;
+    font-size: 1.3rem;
+    box-sizing: border-box;
+}
+section div.info form .text_box{
+    width: 32.9%;
+    height: 2rem;
+    opacity: .9;
+}
+section div.info form textarea{
+    margin-top: 5px;
+    width: 100%;
+    height: 185px;
+    resize: none;
+}
+/********btn-e btn-1 btn-1e*******/
+.btn-e{
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    padding: 10px 50px;
+    display: inline-block;
+    font-weight: bold;
+    position: relative;
+    float: right;
+    box-sizing: border-box;
+    box-shadow: -1px 1px 1.5px #fff;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+}
+.btn-e:before{
+    text-transform: none;
+    position: relative;
+    -webkit-font-smoothing: antialiased;
+}
+.btn-e:after {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+}
+/* Button 1 */
+.btn-1 {
+    border: 3px solid #fff;
+    color: #fff;
+    text-shadow: 1px 1px 2px #fff;
+    transition: 0.5s;
+}
+.btn-1:hover{
+    text-shadow: 1px 1px 2px #222;
+}
+/* Button 1e */
+.btn-1e {
+    overflow: hidden;
+}
+.btn-1e:after {
+    width: 100%;
+    height: 0;
+    top: 30%;
+    left: 70%;
+    background: rgba(0,0,0,0.6);
+    opacity: 0;
+    -webkit-transform: translateX(-30%) translateY(-70%) rotate(45deg);
+    -moz-transform: translateX(-30%) translateY(-70%) rotate(45deg);
+    -ms-transform: translateX(-30%) translateY(-70%) rotate(45deg);
+    transform: translateX(-30%) translateY(-70%) rotate(45deg);
+}
+
+.btn-1e:hover,
+.btn-1e:active{
+    color: #fff;
+    box-shadow: -1px 1px 1.5px #222;
+}
+.btn-1e:active{
+    top: 1px;
+}
+.btn-1e:hover:after {
+    height: 260%;
+    opacity: 1;
+}
+.btn-1e:active:after {
+    height: 400%;
+    opacity: 1;
+}
+/**********social-links**********/
+section div.social-links{
+    width: 100%;
+    height: 125px;
+    background: rgba(0,0,0,0.75);
+    overflow: hidden;
+}
+section div.social-links ul{
+    list-style-type: none;
+    text-align: center;
+}
+section div.social-links ul li{
+    display: inline-block;
+}
+section div.social-links ul li a{
+    text-decoration: none;
+    font-size: 5rem;
+    color: #fff;
+    margin: 0 3rem;
+    box-sizing: border-box;
+    cursor: pointer;
+    text-shadow: 1px 1px 2px #fff;
+    transition: 0.5s;
+    -webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
+    -o-transition: 0.5s;
+}
+section div.social-links ul li a:hover i.fa-facebook-square,
+section div.social-links ul li a:hover i.fa-twitter-square,
+section div.social-links ul li a:hover i.fa-linkedin-square,
+section div.social-links ul li a:hover i.fa-instagram{
+    color: #111;
+    transition: 0.5s;
+    text-shadow: 1px 1px 2px #fff;
+}
+/**********MAP**********/
+section div.map{
+    width: 100%;
+    height: 400px;
+    box-sizing: border-box;
+    border-left: 25px solid rgba(0,0,0,0.75);
+    border-right: 25px solid rgba(0,0,0,0.75);
+    //background: rgba(0,0,0,0.75) url('../image/GoogleMap.gif') no-repeat center center / cover;
+}
+section div.map div.G_map{
+    width: 100%;
+    height: 400px;
+    background-color: #161616;
+    background-image: repeating-linear-gradient( 135deg, #333, #333 10%, transparent 10%, transparent 50% );
+    background-size: 12px 12px;
+    float: left;
+    clear: both;
+}
+/********************************************
+***********************FOOTER
+********************************************/
+footer{
+    width: 100%;
+    height: 100px;
+    background-color: rgba(0,0,0,0.75);
+    clear: both;
+    overflow: hidden;
+    padding-top: 20px;
+}
+
+footer nav p{
+    margin-left: 50px;
+    float: left;
+    color: #333;
+}
+
+footer nav ul li a i {
+    margin-right: 50px;
+    font-size: 35px;
+    color: #333;
+    transition: 0.5s;
+}
+
+footer nav ul li a i:hover{
+    color: #fff;
+}

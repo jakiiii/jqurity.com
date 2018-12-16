@@ -1,0 +1,22 @@
+{% if about_me %}
+<div class="card about-me">
+    <div class="card-header">
+        About Me
+    </div>
+    <div class="card-body">
+        {% for about in about_me %}
+            <img class="card-img-top img-fluid" src="{{ about.image.url }}" alt="Card image cap">
+            <p>{{ about.description }}</p>
+        {% endfor %}
+        <div class="social-sites">
+            {% for social in social_link %}
+                <a href="{{ social.github }}"><i class="fab fa-github"></i></a>
+                <a href="{{ social.gitlab }}"><i class="fab fa-gitlab"></i></a>
+                <a href="{{ social.linkedin }}"><i class="fab fa-linkedin"></i></a>
+                <a href="{{ social.twitter }}"><i class="fab fa-twitter"></i></a>
+            {% endfor %}
+        </div>
+    </div>
+</div><!-- end of about me -->
+<div class="clearfix"></div><br />
+{% endif %}

@@ -1,0 +1,27 @@
+{% load static %}
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+      <!-- Required meta tags -->
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+      <!-- css -->
+      {% include 'base/css.html' %}
+
+
+      <title>{% block title %}jQurity{% endblock %}</title>
+  </head>
+  <body>
+        {% include 'account_base/navbar.html' with brand_name='jQurity' %}
+
+        <div class="container">
+            {% block content %}{% endblock %}
+        </div>
+
+        <!-- JavaScript -->
+        {% include 'base/js.html' %}
+
+        {% include 'base/footer.html' with footer='footer' %}
+  </body>
+</html>

@@ -1,0 +1,20 @@
+{% extends 'account_base.html' %}
+{% block title %}{{ title }} || {{ block.super }}{% endblock title %}
+
+{% block content %}
+
+    <section class="blog-area section">
+        <div class="container">
+            <div class="col-12 col-md-12">
+                <div class="text-center">
+                    <form method="post">{% csrf_token %}
+                    <p>Are you sure you want to <span style="color: #FF0000;">delete</span> <br/>
+                        <span class="h5 text-danger">{{ object }}?</span></p>
+                    <input type="submit" class="btn btn-lg btn-danger" value="Confirm" />
+                </div>
+            </form>
+            </div>
+        </div>
+    </section>
+
+{% endblock %}

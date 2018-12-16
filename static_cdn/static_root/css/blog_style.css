@@ -1,0 +1,196 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/*
+    Created on : Nov 14, 2018, 1:04:05 PM
+    Author     : Jaki
+*/
+
+*{
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+body{
+    width: 100%;
+    min-height: 620px;
+    color: #172B49;
+    background-color: #fff;
+    font-family: "Arial", Helvetica, sans-serif;
+}
+
+/********************************************
+***********************MENU
+********************************************/
+.header ul li.nav-item a.nav-link{
+    /*font-weight: bold;*/
+    font-size: 20px;
+}
+
+/********************************************
+***********************SEARCH
+********************************************/
+.stylish-input-group .input-group-addon{
+    background: white !important;
+}
+.stylish-input-group .form-control{
+    box-shadow:0 0 0;
+    border-color:#ccc;
+}
+.stylish-input-group button{
+    border:0;
+    background:transparent;
+}
+
+/********************************************
+***********************Cover Image
+********************************************/
+
+.cover-div{
+    height: 300px;
+}
+
+.cover-img{
+    display: block;
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+/********************************************
+***********************CARD
+********************************************/
+
+.card-img-height{
+    height: 200px;
+}
+
+/********************************************
+***********************ALL POST CARD
+********************************************/
+
+.all-post .card a img{
+    height: 150px;
+}
+
+.all-post .card div.card-body{
+    height: 100px;
+}
+
+/********************************************
+***********************ABOUT ME
+********************************************/
+
+.about-me{
+    /*margin-top: 52px;*/
+    /*border: none;*/
+}
+
+.about-me div.card-header{
+    margin: 0;
+    color: #fff;
+    background-color: #172B49;
+    font-weight: bold;
+    font-size: 2rem;
+    text-align: center;
+    line-height: 40px;
+}
+
+.about-me div.card-body img{
+    width: 140px;
+    height: 140px;
+    margin-left: 63px;
+
+    transition: 0.5s;
+    -webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
+    -o-transition: 0.5s;
+    cursor: pointer;
+}
+
+/*.about-me div.card-body img:hover{
+    opacity: 0.9;
+}*/
+
+.about-me div.card-body p{
+    padding: 0px 12px;
+    margin: 10px 0 25px 0;
+    font-size: 14px;
+}
+
+.about-me div.card-body div{
+    display: block;
+}
+
+.about-me div.card-body div.social-sites{
+    padding-bottom: 20px;
+    text-align: center;
+    font-family: 'Muli', sans-serif;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 1.5rem;
+}
+
+.about-me div.card-body div.social-sites i{
+    color: #172B49;
+}
+
+.about-me div.card-body div.social-sites::before ::after{
+    box-sizing: border-box;
+}
+
+/********************************************
+***********************Category
+********************************************/
+.category div.card{
+    background-color: #fff;
+    /*border: none;*/
+}
+
+.category div.card-header{
+    margin: 0;
+    color: #fff;
+    background-color: #172B49;
+    font-weight: bold;
+    font-size: 1.3rem;
+}
+
+.category .card-body div.sub-category a{
+    text-decoration: none;
+    margin-left: 25px;
+}
+
+/********************************************
+***********************Subscribe
+********************************************/
+
+.subscribe div.card-header{
+    margin: 0;
+    color: #fff;
+    background-color: #172B49;
+    font-weight: bold;
+    font-size: 1.5rem;
+    line-height: 35px;
+}
+
+.btn-subscribe{
+    background-color: #172B49;
+    color: #fff;
+}
+
+/********************************************
+***********************FOOTER
+********************************************/
+
+footer.blog-footer{
+    width: 100%;
+    color: #fff;
+    background-color: #161616;
+}
+
+footer.blog-footer nav p{
+    padding-top: 12px;
+}

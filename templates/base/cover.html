@@ -1,0 +1,11 @@
+{% if banner_img %}
+    <section>
+        <div class="container-fluid">
+            <div class="cover-div">
+                {% for banner in banner_img %}
+                    <img src="{{ banner.banner.url }}" alt="{{ banner.heading }}" class="img cover-img" />
+                {% endfor %}
+            </div><!-- end of cover-image -->
+        </div><!-- end of container -->
+    </section>
+{% endif %}

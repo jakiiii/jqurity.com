@@ -1,0 +1,48 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+    <head>
+    <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <title>{% block title %}jQurity{% endblock %}</title>
+
+        <!-- css -->
+        {% include 'base/css.html' %}
+
+
+    </head>
+    <body>
+
+        <div class="container-fluid">
+            {% include 'base/navbar.html' with brand_name='jQurity' %}
+
+            {% include 'base/cover.html' with banner_image='banner_image' %}
+        </div><!-- end of container-fluid-->
+        <div class="clearfix"></div><br />
+
+        <div class="container-fluid">
+            <section>
+                <div class="row">
+                    <!-- main content -->
+                    {% block content %}{% endblock %}
+                    <!-- main content -->
+
+                    <div class="col-3 col-md-3">
+
+                        {% include 'base/about.html' with about='about_content' %}
+                        {% include 'base/category.html' with category='category_content' %}
+
+                    </div><!-- end of col-3 -->
+
+                </div><!-- end of row -->
+            </section><!-- end of section -->
+        </div>
+
+        {% include 'base/footer.html' with footer='footer' %}
+
+        <!-- Optional JavaScript -->
+        {% include 'base/js.html' %}
+    </body>
+</html>

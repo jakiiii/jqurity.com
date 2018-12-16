@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/2.1/ref/settings/
 """
 
 import os
+from django.contrib.messages import constants as messages
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -38,6 +39,36 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 ]
+
+THIRD_PARTY_APPS = [
+    'widget_tweaks',
+    'ckeditor',
+    'ckeditor_uploader',
+]
+
+LOCAL_APPS = [
+    'accounts',
+    'profiles',
+    'blog',
+    'category',
+    'tags',
+    'post',
+    'about',
+    'search',
+]
+
+INSTALLED_APPS += THIRD_PARTY_APPS + LOCAL_APPS
+
+# LOGIN AND LOGOUT URL
+LOGOUT_URL = '/logout/'
+LOGOUT_REDIRECT_URL = '/'
+LOGIN_URL = '/login/'
+LOGIN_REDIRECT_URL = '/'
+
+# Custom User Model
+AUTH_USER_MODEL = 'accounts.User'
+# FORCE_SESSION_TO_ONE = False
+# FORCE_INACTIVE_END_SESSION = False
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -100,6 +131,15 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+# Message framework
+MESSAGE_TAGS = {
+    messages.INFO: 'alert alert-info',
+    messages.SUCCESS: 'alert alert-success',
+    messages.WARNING: 'alert alert-warning',
+    messages.ERROR: 'alert alert-danger',
+    messages.DEBUG: 'alert alert-info',
+}
+
 
 # Internationalization
 # https://docs.djangoproject.com/en/2.1/topics/i18n/
@@ -119,3 +159,31 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.1/howto/static-files/
 
 STATIC_URL = '/static/'
+STATICFILES_DIRS = (
+    os.path.join(BASE_DIR, 'static'),
+    '/var/www/static/',
+)
+
+STATIC_ROOT = os.path.join(
+    os.path.dirname(BASE_DIR),
+    'jQurity/static_cdn', 'static_root'
+)
+
+
+MEDIA_URL = "/media/"
+MEDIA_ROOT = os.path.join(
+    os.path.dirname(BASE_DIR),
+    "jQurity/static_cdn", "media_root"
+)
+
+# CkEditor Upload path
+CKEDITOR_UPLOAD_PATH = 'uploads/'
+
+# CkEditor Custom Configuration
+CKEDITOR_CONFIGS = {
+    'default': {
+        'toolbar': 'Custom',
+        'width': 680,
+        'extraPlugins': ','.join(['codesnippet']),
+    },
+}

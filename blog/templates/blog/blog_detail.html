@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}{{ title }} || {{ block.super }}{% endblock title %}
+
+{% block content %}
+<div class="col-9 col-md-9">
+    <div style="margin-left: 9rem;">
+        <img src="{{ object.image.url }}" alt="image test" class="img img-thumbnail" style="width: 800px; height: 350px;" />
+    </div>
+    <div class="py-4" style="margin-left: 3rem;">
+        <h1><b>{{ object.title }}</b></h1>
+        <p><b>Category:</b> {{ object.category }}</p>
+        <p><b>Author:</b> {{ object.owner.first_name }} {{ object.owner.last_name }}</p>
+        <p><b>Publish:</b> {{ object.timestamp|date:'F j, Y' }}</p>
+        <div>
+            <p class="d-flex justify-content-center">{{ object.content | safe }}</p>
+        </div>
+    </div>
+    <div>
+        <p>
+            {% for tag in object.tags.all %}
+            <a href="#" style="text-decoration: none" class="btn btn-info btn-sm">{{ tag }}</a>
+            {% endfor %}
+        </p>
+    </div>
+    <hr />
+    <div class="col-12 col-md-12">
+        <div class="card-deck">
+            {% for r_post in related_post %}
+                <div class="col-4 col-md-4 py-2">
+                    <div class="card">
+                        <a href="{{ r_post.get_absolute_url }}"><img class="card-img-top card-img-height img img-thumbnail" src="{{ r_post.image.url }}" alt="{{ r_post.title }}"></a>
+                        <div class="card-body">
+                            <p class="card-title">
+                                <a href="{{ r_post.get_absolute_url }}" style="text-decoration: none;">{{ r_post.title }}</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div><!- end of related post - col-12 col-md-12 -->
+</div><!-- end of col-9 col-md-9 -->
+{% endblock %}
