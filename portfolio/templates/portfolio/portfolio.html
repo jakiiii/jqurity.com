@@ -1,0 +1,35 @@
+{% extends 'base_portfolio.html' %}
+{% url 'portfolio' as portfolio_url %}
+
+{% block content_portfolio %}
+    <header class="portfolio-header">
+        <div class="grid">
+            <a class="logo ot-letter-bottom" href="{{ portfolio_url }}"><span data-letter="Jaki">Jaki</span></a>
+
+            {% include 'portfolio/navbar_portfolio.html' %}
+        </div><!-- menu_bar -->
+        <div class="slider_text">
+            {% include 'portfolio/slider_text.html' %}
+        </div><!-- end of slider_text -->
+    </header><!-- end of header -->
+
+    <section>
+        {% include 'portfolio/quote_content.html' %}
+    </section><!-- end of quote section -->
+
+    <section>
+        {% include 'portfolio/about.html' %}
+    </section><!-- end of about section -->
+
+    <section>
+        {% include 'portfolio/skill.html' %}
+    </section><!-- end of skill section -->
+
+    <section class="portfolio_bg">
+        {% include 'portfolio/portfolio_content.html' %}
+    </section><!-- end of portfolio section -->
+
+    <section>
+        {% include 'contact/contact.html' %}
+    </section>
+{% endblock %}

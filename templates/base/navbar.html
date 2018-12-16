@@ -1,5 +1,6 @@
 {% url 'home' as home_url %}
 {% url 'profile' as profile_url %}
+{% url 'portfolio' as portfolio_url %}
 {% url 'login' as account_url %}
 {% url 'logout' as logout_url %}
 
@@ -14,6 +15,9 @@
                                 <ul class="navbar-nav mr-auto float-left">
                                     <li class="nav-item {% if request.path == home_url %}active{% endif %}">
                                         <a class="nav-link" href="{{ home_url }}">Home</a>
+                                    </li>
+                                    <li class="nav-item {% if request.path == portfolio_url %}active{% endif %}">
+                                        <a class="nav-link" href="{{ portfolio_url }}">Portfolio</a>
                                     </li>
                                     {% if not request.user.is_authenticated %}
                                         <li class="nav-item {% if request.path == account_url %}active{% endif %}">

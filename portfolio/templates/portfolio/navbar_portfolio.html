@@ -1,0 +1,42 @@
+{% url 'home' as home_url %}
+
+<nav class="portfolio">
+                        <ul>
+{#                            <li>#}
+{#                                <div class="item-container">#}
+{#                                    <div><a href="#" aria-haspopup="true" class="item-top">HOME</a></div>#}
+{#                                    <div><a href="#" aria-haspopup="true" class="item-bottom">HOME</a></div>#}
+{#                                </div>#}
+{#                            </li>#}
+                            <li>
+                                <div class="item-container">
+                                    <div><a href="#" aria-haspopup="true" class="item-top">ABOUT</a></div>
+                                    <div><a href="#" aria-haspopup="true" class="item-bottom">ABOUT</a></div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="item-container">
+                                    <div><a href="#" aria-haspopup="true" class="item-top">SKILL</a></div>
+                                    <div><a href="#" aria-haspopup="true" class="item-bottom">SKILL</a></div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="item-container">
+                                    <div><a href="#" aria-haspopup="true" class="item-top">PORTFOLIO</a></div>
+                                    <div><a href="#" aria-haspopup="true" class="item-bottom">PORTFOLIO</a></div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="item-container">
+                                    <div><a href="#" aria-haspopup="true" class="item-top">CONTACT</a></div>
+                                    <div><a href="#" aria-haspopup="true" class="item-bottom">CONTACT</a></div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="item-container">
+                                    <div><a href="{{ home_url }}" aria-haspopup="true" class="item-top">Blog</a></div>
+                                    <div><a href="{{ home_url }}" aria-haspopup="true" class="item-bottom">Blog</a></div>
+                                </div>
+                            </li>
+                        </ul>
+                    </nav>

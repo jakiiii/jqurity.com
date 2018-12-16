@@ -3,7 +3,9 @@
 <!-- Normalize css -->
 <link rel="stylesheet" type="text/css" media="screen" href="{% static 'css/normalize.css' %}">
 
-<link rel="stylesheet" type="text/css" media="screen" href="{% static 'css/bootstrap.min.css' %}">
+{% if not base_portfolio %}
+    <link rel="stylesheet" type="text/css" media="screen" href="{% static 'css/bootstrap.min.css' %}">
+{% endif %}
 
 <!-- fonts awesome-->
 <link rel="stylesheet" href="{% static 'font/fontawesome/css/all.min.css' %}">

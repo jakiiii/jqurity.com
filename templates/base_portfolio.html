@@ -1,0 +1,24 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+    <head>
+    <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <title>{% block title %}jQurity{% endblock %}</title>
+
+        <!-- css -->
+        {% include 'base/css.html' with base_portfolio='base_portfolio' %}
+
+
+    </head>
+    <body class="portfolio">
+
+        {% block content_portfolio %}{% endblock %}
+
+
+
+        {% include 'base/footer_portfolio.html' %}
+    </body>
+</html>
