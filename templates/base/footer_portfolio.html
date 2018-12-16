@@ -1,10 +1,12 @@
 <footer>
-            <nav>
-                <p>Copyright &COPY; 2018 by Abdullah Al Mohin Jaki &squf; All rights reserved</p>
-                <ul>
-                    <li><a href="" target="_blank"><i class="fab fa-github-square"></i></a></li>
-                    <li><a href="" target="_blank"><i class="fab fa-gitlab"></i></a></li>
-                    <li><a href="" target="_blank"><i class="fab fa-twitter-square"></i></a></li>
-                </ul>
-            </nav>
-        </footer><!-- end of footer -->
+    <nav>
+        <p>Copyright &COPY; 2018 by Abdullah Al Mohin Jaki &squf; All rights reserved</p>
+        <ul>
+            {% for social in social_link %}
+            <li><a href="{{ social.github }}" target="_blank"><i class="fab fa-github-square"></i></a></li>
+            <li><a href="{{ social.gitlab }}" target="_blank"><i class="fab fa-gitlab"></i></a></li>
+            <li><a href="{{ social.linkedin }}" target="_blank"><i class="fab fa-linkedin"></i></a></li>
+            {% endfor %}
+        </ul>
+    </nav>
+</footer><!-- end of footer -->

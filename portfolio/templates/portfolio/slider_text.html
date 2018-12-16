@@ -1,2 +1,4 @@
-<p>Security is more important than gorgeous design!</p>
-                    <a class="btn" href="#">RESUME</a>
+{% for slider in slider_info %}
+<p>{{ slider.highlight_quote }}</p>
+<a class="btn" href="#">RESUME</a>
+{% endfor %}

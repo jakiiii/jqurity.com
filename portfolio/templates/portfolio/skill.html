@@ -1,31 +1,27 @@
 <div class="skill">
                 <h2 class="light">SKILLS</h2>
-                <div class="top_skill">
+                <div class="top_skill" style="padding: 1.5rem">
                     <h3 class="underline">Expertise</h3>
                     <ul>
-                        <li>Python</li>
-                        <li>Django</li>
-                        <li>Codeigniter</li>
-                        <li>PHP RAW</li>
-                        <li>Bootstrap</li>
-                        <li>MySQLi</li>
-                        <li>SQLite</li>
+                        {% for exprience in experience_info %}
+                        <li>{{ exprience.experience }}</li>
+                        {% endfor %}
                     </ul>
                 </div>
-                <div class="also_know">
+                <div class="also_know" style="padding: 1.5rem">
                     <h3 class="underline">Familiar With</h3>
                     <ul>
-                        <li>Angular 6</li>
-                        <li>JavaScript</li>
-                        <li>jQuery</li>
-                        <li>JSON</li>
-                        <li>GIT</li>
+                        {% for familiar in familiar_info %}
+                        <li>{{ familiar.familiar }}</li>
+                        {% endfor %}
                     </ul>
                 </div>
-                <div class="other_skill">
+                <div class="other_skill" style="padding: 1.5rem">
                     <h3 class="underline">Interest</h3>
                     <ul>
-                        <li>Penetration test</li>
+                        {% for interest in interest_info %}
+                        <li>{{ interest.interest }}</li>
+                        {% endfor %}
                     </ul>
                 </div>
             </div><!-- end of skill -->
