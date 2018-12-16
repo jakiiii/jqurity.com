@@ -1,5 +1,8 @@
-from django.shortcuts import render
-from django.views.generic import DetailView
+from django.urls import reverse_lazy
+from django.views.generic import DetailView, CreateView
+from django.views.generic.edit import FormMixin
+
+from contact.forms import ContactForm
 
 from .models import (
     Slider,
@@ -16,8 +19,10 @@ from about.models import (
 
 
 # Create your views here.
-class PortfolioView(DetailView):
+class PortfolioView(CreateView):
+    form_class = ContactForm
     template_name = 'portfolio/portfolio.html'
+    success_url = reverse_lazy('portfolio')
 
     def get_object(self, queryset=None):
         return self.request.user
@@ -34,3 +39,8 @@ class PortfolioView(DetailView):
         context['interest_info'] = Interest.objects.all()
         context['portfolio_info'] = Portfolio.objects.all()[:8]
         return context
+
+    def form_valid(self, form):
+        instance = form.save(commit=True)
+        print(instance)
+        return super().form_valid(form)
